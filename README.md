@@ -22,9 +22,18 @@ As subclasses concretas da criadora (WindowsDialog e WebDialog) sobrescrevem o m
 A interface Button declara as operações que todos os produtos concretos devem implementar, e as classes WindowsButton e HTMLButton fornecem implementações concretas.
 Na classe Application, o método initialize() seleciona dinamicamente o tipo de criador com base na configuração do sistema operacional e, em seguida, o método main() usa o Factory Method para criar e renderizar um diálogo com os botões apropriados.
 Essencialmente, o padrão Factory Method permite desacoplar o código cliente do código de criação de objetos, promovendo a flexibilidade e a manutenção do código, além de permitir a criação de objetos com base em condições dinâmicas ou configurações externas.
-
-
-
+https://github.com/JoseTrivelato/Padr-es-de-projeto/issues/2#issue-2293516429
+Padrão Decorator, ele resolve o problema de adicionar funcionalidades adicionais a objetos existentes de forma dinâmica, sem modificar sua estrutura básica.
+Problema:
+Suponha que você tenha uma classe base que executa uma funcionalidade básica, e você precisa adicionar novos comportamentos a essa classe de forma flexível e dinâmica. Se você optar por modificar a classe base diretamente, isso pode levar a um código complicado, difícil de manter e potencialmente quebrar o princípio Open/Closed
+Solução:
+O padrão Decorator resolve esse problema permitindo que você adicione novas funcionalidades aos objetos existentes sem modificar sua estrutura básica. Isso é alcançado por meio de uma série de classes que são aninhadas umas dentro das outras. Cada classe tem a mesma interface que a classe base e pode envolver objetos adicionais.
+No código fornecido:
+A classe EventManager atua como a classe base que gerencia inscrições e notificações de eventos.
+A classe Editor é o componente base para o qual funcionalidades adicionais são adicionadas.
+As classes LoggingListener e EmailAlertsListener são exemplos de decoradores concretos que adicionam funcionalidades específicas (registro em arquivo de log e alertas por e-mail, respectivamente) ao componente base Editor.
+A classe Application demonstra como os decoradores podem ser aplicados de forma dinâmica e flexível aos objetos existentes.
+Essencialmente, o padrão Decorator permite que você adicione ou remova responsabilidades de objetos em tempo de execução, mantendo a flexibilidade e a modularidade do seu código.
 
 
 
