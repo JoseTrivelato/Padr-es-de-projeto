@@ -1,3 +1,4 @@
+Todos os códigos e diagramas foram tirados do site Refactoring Guru: https://refactoring.guru/pt-br/design-patterns
 Padrão estrtural: Decorator, ele resolve o problema de adicionar funcionalidades adicionais a objetos existentes de forma dinâmica, sem modificar sua estrutura básica.
 Problema:
 Suponha que você tenha uma classe base que executa uma funcionalidade básica, e você precisa adicionar novos comportamentos a essa classe de forma flexível e dinâmica.
@@ -34,6 +35,6 @@ A classe Editor é o componente base para o qual funcionalidades adicionais são
 As classes LoggingListener e EmailAlertsListener são exemplos de decoradores concretos que adicionam funcionalidades específicas (registro em arquivo de log e alertas por e-mail, respectivamente) ao componente base Editor.
 A classe Application demonstra como os decoradores podem ser aplicados de forma dinâmica e flexível aos objetos existentes.
 Essencialmente, o padrão Decorator permite que você adicione ou remova responsabilidades de objetos em tempo de execução, mantendo a flexibilidade e a modularidade do seu código.
-
+https://github.com/JoseTrivelato/Padr-es-de-projeto/issues/3#issue-2293531588
 
 
